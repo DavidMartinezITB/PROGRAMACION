@@ -1,0 +1,20 @@
+Python és un llenguatge de programació d'alt nivell i propòsit general molt utilitzat.[1][2][3] Va ser creat per Guido van Rossum l'any 1991. La seva filosofia de disseny busca llegibilitat en el codi i la seva sintaxi permet als programadors expressar conceptes en menys línies de codi del que seria possible en llenguatges com C.[4][5] També proveeix estructures per permetre programes més entenedors tant a petita com a gran escala.[6]
+
+Python suporta diversos paradigmes de programació, incloent-hi programació orientada a objectes (POO), imperativa i també funcional o procedimental. Presenta un sistema dinàmic i una gestió de la memòria automàtica i té una gran i exhaustiva biblioteca estàndard.[7]
+
+Com altres llenguatges de programació dinàmics, Python és usat sovint com un llenguatge script, però també es fa servir en una àmplia gamma de contextos no-script. Utilitzant eines desenvolupades per tercers com Py2exe, cx Freeze o Pyinstaller,[8] el codi Python pot ser reduït a programes executables independents. Existeixen intèrprets de Python per molts sistemes operatius diferents.
+
+
+Mi direccion IP es: 192.168.1.1
+Mi mail no es: david@gmail.com
+
+Mi telefono es: +346515765 (Llamame javi)
+
+Estudio en el ITB (http://itb.cat)
+
+:-)
+:==)
+patatitas:-------)
+patatitas:--)
+patatitas:-)
+patatitas:)

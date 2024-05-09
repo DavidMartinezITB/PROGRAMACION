@@ -1,0 +1,182 @@
+ import funciones
+
+board = ["*"]*9
+win = 0
+cont = 0
+funciones.print_board(board)
+while win == 0 and cont < 9:
+    pos = input("Introduce la posición (fila columna): ")
+    action = funciones.validate_move(pos)
+    if action == False:
+        print("La posición introducida no es válida")
+
+    else:
+        if cont % 2 == 0:
+            turn = 0
+        else:
+            turn = 1
+        move = funciones.update_board(pos, turn, board)
+        if move == 2:
+            print("La posición ya está ocupada")
+        else:
+            cont += 1
+
+    win = funciones.check_winner(board)
+if win == 1:
+    print("Ha ganado el jugador 1")
+elif win == 2:
+    print("Ha ganado el jugador 2")
+elif win == 0:
+    print("Empate")
+[5/4, 11:01] José ASIX: def print_board(board):
+    print(f" {board[0]} | {board[1]} | {board[2]} ")
+    print("---|---|---")
+    print(f" {board[3]} | {board[4]} | {board[5]} ")
+    print("---|---|---")
+    print(f" {board[6]} | {board[7]} | {board[8]} ")
+
+def update_board(pos, turn, board):
+
+    match pos:
+        case "1 1":
+            if turn == 0:
+                if board[0] == "X" or board[0] == "O":
+                    return 2
+                else:
+                    board[0] = "X"
+            else:
+                if board[0] == "X" or board[0] == "O":
+                    return 2
+                else:
+                    board[0] = "O"
+        case "1 2":
+            if turn == 0:
+                if board[1] == "X" or board[1] == "O":
+                    return 2
+                else:
+                    board[1] = "X"
+            else:
+                if board[1] == "X" or board[1] == "O":
+                    return 2
+                else:
+                    board[1] = "O"
+        case "1 3":
+            if turn == 0:
+                if board[2] == "X" or board[2] == "O":
+                    return 2
+                else:
+                    board[2] = "X"
+            else:
+                if board[2] == "X" or board[2] == "O":
+                    return 2
+                else:
+                    board[2] = "O"
+        case "2 1":
+            if turn == 0:
+                if board[3] == "X" or board[3] == "O":
+                    return 2
+                else:
+                    board[3] = "X"
+            else:
+                if board[3] == "X" or board[3] == "O":
+                    return 2
+                else:
+                    board[3] = "O"
+        case "2 2":
+            if turn == 0:
+                if board[4] == "X" or board[4] == "O":
+                    return 2
+                else:
+                    board[4] = "X"
+            else:
+                if board[4] == "X" or board[4] == "O":
+                    return 2
+                else:
+                    board[4] = "O"
+        case "2 3":
+            if turn == 0:
+                if board[5] == "X" or board[5] == "O":
+                    return 2
+                else:
+                    board[5] = "X"
+            else:
+                if board[5] == "X" or board[5] == "O":
+                    return 2
+                else:
+                    board[5] = "O"
+        case "3 1":
+            if turn == 0:
+                if board[6] == "X" or board[6] == "O":
+                    return 2
+                else:
+                    board[6] = "X"
+            else:
+                if board[6] == "X" or board[6] == "O":
+                    return 2
+                else:
+                    board[6] = "O"
+        case "3 2":
+            if turn == 0:
+                if board[7] == "X" or board[7] == "O":
+                    return 2
+                else:
+                    board[7] = "X"
+            else:
+                if board[7] == "X" or board[7] == "O":
+                    return 2
+                else:
+                    board[7] = "O"
+        case "3 3":
+            if turn == 0:
+                if board[8] == "X" or board[8] == "O":
+                    return 2
+                else:
+                    board[8] = "X"
+            else:
+                if board[8] == "X" or board[8] == "O":
+                    return 2
+                else:
+                    board[8] = "O"
+    return print_board(board)
+
+def validate_move(pos):
+    if pos in ["1 1", "1 2", "1 3", "2 1", "2 2", "2 3", "3 1", "3 2", "3 3"]:
+        return True
+    else:
+        return False
+
+def check_winner(board):
+    if board[0] == board[1] == board[2] == "X":
+        return 1
+    elif board[3] == board[4] == board[5] == "X":
+        return 1
+    elif board[6] == board[7] == board[8] == "X":
+        return 1
+    elif board[0] == board[3] == board[6] == "X":
+        return 1
+    elif board[1] == board[4] == board[7] == "X":
+        return 1
+    elif board[2] == board[5] == board[8] == "X":
+        return 1
+    elif board[0] == board[4] == board[8] == "X":
+        return 1
+    elif board[2] == board[4] == board[6] == "X":
+        return 1
+    elif board[0] == board[1] == board[2] == "O":
+        return 2
+    elif board[3] == board[4] == board[5] == "O":
+        return 2
+    elif board[6] == board[7] == board[8] == "O":
+        return 2
+    elif board[0] == board[3] == board[6] == "O":
+        return 2
+    elif board[1] == board[4] == board[7] == "O":
+        return 2
+    elif board[2] == board[5] == board[8] == "O":
+        return 2
+    elif board[0] == board[4] == board[8] == "O":
+        return 2
+    elif board[2] == board[4] == board[6] == "O":
+        return 2
+    else:
+        return 0
