@@ -1,0 +1,13 @@
+{
+    "input": {
+        "fileName": "data.txt"
+    },
+    "output": {
+        "fileName": "outpu.txt"
+    },
+    "logs": {
+        "logFile":  "log.txt",
+        "logFormat": "%(asctime)s %(levelname)s %(message)s",
+        "logMode": "a"
+    }
+}
